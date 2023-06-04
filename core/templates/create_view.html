@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block content %}
+<br>
+<form style="margin:10px" method="POST">
+    {% csrf_token %}
+    {% comment %} <div class='form-group'>
+        <label>Title</label>
+        <input style="width:500px; border: 1px solid black" type='text' id='title' name="title" class='form-control'>
+    </div>
+    <div class='form-group'>
+        <label>Content</label>
+        <textarea style="width:500px; border: 1px solid black" rows='10' cols='30' id='content' name='content' class='form-control'></textarea>
+    </div>
+    <div class='form-group'>
+        <label>Created Time</label>
+        <input style="width:500px; border: 1px solid black" type='datetime-local' id='title' class='form-control'>
+    </div>
+    <div class='form-group'>
+        <label>Author</label>
+        <input style="width:500px; border: 1px solid black" type='text' id='author_name' name="author_name" class='form-control'>
+    </div>
+     {% endcomment %}
+    {{form.as_p}}
+    <button style=" margin-top:10px; text-align:center" class="btn btn-success">Save</button>
+</form>
+
+
+
+{% endblock content %}

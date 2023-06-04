@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block content%}
+{% for blog in blogs  %}
+<div style='width:900px; margin:10px'>
+<h1 style="color:purple; font-size: 28px">{{blog.title}} <span style="color: grey">(by {{blog.author_name}})</span><h1>
+    <p style="font-size:18px">{{blog.content}}</p>
+    <div style="font-size: 12px; text-align:right; margin=20px" class="time">{{blog.created_time}}</div>
+</div>
+{% endfor %}
+{% endblock %}
+ 
